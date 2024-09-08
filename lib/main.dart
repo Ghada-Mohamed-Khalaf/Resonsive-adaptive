@@ -10,28 +10,26 @@ class MediaQueryTest extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var height= MediaQuery.of (context).size.height;
+   
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              width: 200,
-              height: height*.2,
-              color: Colors.black,
-            ),
-            Container(
-              width: 200,
-              height: height*.2,
-              color: Colors.red,
-            ),
-            Container(
-              width: 200,
-              height: height*.2,
-              color: Colors.pink,
-            ),
-          ],
-        ),
+        body: ListView.builder(
+          itemCount:50,
+
+
+
+            itemBuilder:(context,index){
+            return Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                color: Colors.pink,
+                child: ListTile(
+                  title: Text('${index+1}'),
+                ),
+              ),
+            );
+            })
+       
       ),
 
 
