@@ -17,17 +17,17 @@ class MediaQueryTest extends StatelessWidget {
           children: [
             Container(
               width: 200,
-              height: 200,
+              height: height*.2,
               color: Colors.black,
             ),
             Container(
               width: 200,
-              height: 200,
+              height: height*.2,
               color: Colors.red,
             ),
             Container(
               width: 200,
-              height: 200,
+              height: height*.2,
               color: Colors.pink,
             ),
           ],
